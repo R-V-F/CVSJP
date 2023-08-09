@@ -1,0 +1,71 @@
+p {
+    color:white;
+}
+
+
+.grid {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: 1fr 6.5fr 1fr;
+    grid-template-rows: 1fr 5fr 1fr;
+
+    grid-template-areas:
+        "top top top"
+        "side1 main side2"
+        "bottom bottom bottom";
+
+}
+
+.side1 {
+    grid-area: side1;
+    background-color: aliceblue;
+}
+
+.side2 {
+    grid-area: side2;
+    background-color: rgb(9, 255, 0);
+}
+
+.main {
+    grid-area: main;
+    display: grid;
+    width: 100%;
+    min-width: 800px;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+        "chart current";
+    
+
+}
+
+.chart {
+    grid-area: chart;
+
+}
+
+#CurrentData {
+    width: 100%;
+}
+#LiveData {
+    width: 100%;
+}
+
+.current {
+    grid-area: current;
+}
+
+.top {
+    grid-area: top;
+    background-color: brown;
+}
+
+.bottom {
+    background-color: blueviolet;
+
+    grid-area: bottom;
+}
+
+#timelimit {
+    width: 80px;
+}
